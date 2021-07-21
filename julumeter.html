@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<style>
+    body {
+        background-image: url('resources/lachendejulu.jpg');
+        background-repeat: no-repeat;  
+        background-size: cover;
+  }
+    #juluText {
+        text-align: center;
+        font-size: 500%;    
+            
+}
+    #button {
+    border: solid;
+    color: black;
+    background-color: lightgray;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    position:relative;
+    width: 25%; 
+    top: 400px;
+    left: 38%;
+    cursor: pointer;
+    }
+</style>
+<script type = "text/javascript" src = "juluMeter logistiek.js"></script>
+
+<body onload="edgeCaseHandler(juluPercentage);">
+    <h1 id="juluText"><span id="result-name"></span> is <span id="juluPercentage"></span>% julu </h1>
+    <a href="/index.html " id="button">
+        OPNIEUW?
+    </a>
+<script>
+    let juluPercentage = juluCalculator();
+    document.getElementById("juluPercentage").innerHTML = juluPercentage;
+   </script>
+
+</body>
+
+</html>

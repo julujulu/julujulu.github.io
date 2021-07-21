@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+body {
+  background-image: url('resources/lachendejulu.jpg');
+  background-repeat: repeat;  
+  background-size: contain;
+  background-position: center;
+}
+
+h1 { 
+  font-size: 700%;
+  text-align: center;  
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid;
+  color: black;
+  background-color: lightgray;
+  text-align: center;
+  text-decoration: none;
+  display: center;
+  font-size: 60px;
+  position:relative;
+  height: 100px;
+  left: 43.3%;
+}
+
+form {
+  font-size: 150%;
+  padding-bottom: 100px;
+  white-space: nowrap;
+  cursor: pointer;
+  height:20px; 
+  width:100px; 
+  margin: -20px -90px; 
+  position:relative;
+  left:50%;
+
+}
+
+#juluLaadBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  display: none;
+  font-size: 500%;  
+  border: solid;
+  position: relative;
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0);
+  }
+
+  100% {
+    transform: translate(1400px);
+  }
+}
+#juluHoofd {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  animation: move 3s linear 1;
+  display: none;
+}
+
+
+
+</style>
+<script type="text/javascript" src="juluMeter logistiek.js"></script>
+<script>
+  window.addEventListener("keydown", function(event) {
+    if (event.keyCode === 13) {
+      event.preventDefault();
+      yusuKlikken();
+      show();
+    }
+  }
+  )
+</script>
+<body>
+    <h1>JULUMETER <br> De Website</h1>
+    <form action = "/julumeter.html">
+      <b id="text">Vul naam in:</b> <br>
+      <input type="text" id="name" name="name"><br>
+      <input type = "submit" id = "submit" value ="START" style = "display:none;">
+    </form>
+    <button id="knop" onclick="yusuKlikken(); show();">START</button>
+    <div>
+      <img src="resources/superjulu.jpeg" id = "juluHoofd">
+    </div>
+    <div class="juluLaadBar" id = "juluLaadBar">
+      JULU WORDT BEREKEND...
+  </div>
+</body>
+</html>
